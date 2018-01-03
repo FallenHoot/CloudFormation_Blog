@@ -1,0 +1,1218 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'EC2: Highly available SSH bastion host template'
+Metadata:
+  'AWS::CloudFormation::Designer':
+    114cd20f-2bb8-4c69-be12-3d5267cb4b5f:
+      size:
+        width: 780
+        height: 570
+      position:
+        x: 1980
+        'y': 330
+      z: 1
+      embeds:
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 88bebc8d-00d7-4e4c-a97e-48aaad8d349e
+        - 9d30e47d-29e5-46ae-87bb-5e117f3a29c5
+        - 03328479-ebd2-4f7b-bf37-1c60290803c4
+        - c2dddb03-c8e1-4df4-8a78-2204a279fff6
+        - e45173b9-6f54-48b4-ae64-68b0877e93ef
+        - 8ba5792d-d398-4465-8931-a627eae1ae2c
+        - 37716d51-5898-47f2-83e1-d3676290d2e8
+    c2dddb03-c8e1-4df4-8a78-2204a279fff6:
+      size:
+        width: 240
+        height: 270
+      position:
+        x: 2430
+        'y': 360
+      z: 2
+      parent: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+      embeds: []
+      iscontainedinside:
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+    03328479-ebd2-4f7b-bf37-1c60290803c4:
+      size:
+        width: 240
+        height: 210
+      position:
+        x: 2430
+        'y': 660
+      z: 2
+      parent: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+      embeds: []
+      iscontainedinside:
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+    88bebc8d-00d7-4e4c-a97e-48aaad8d349e:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2360
+        'y': 350
+      z: 2
+      parent: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+      embeds: []
+      iscontainedinside:
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+    37716d51-5898-47f2-83e1-d3676290d2e8:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2090
+        'y': 350
+      z: 2
+      parent: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+      embeds: []
+      isassociatedwith:
+        - 9d30e47d-29e5-46ae-87bb-5e117f3a29c5
+      iscontainedinside:
+        - c2dddb03-c8e1-4df4-8a78-2204a279fff6
+        - 03328479-ebd2-4f7b-bf37-1c60290803c4
+      dependson:
+        - e45173b9-6f54-48b4-ae64-68b0877e93ef
+        - 0b06d1a6-0e47-4dc3-a0e3-c3cc8b1d466c
+    9d30e47d-29e5-46ae-87bb-5e117f3a29c5:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2180
+        'y': 350
+      z: 2
+      parent: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+      embeds: []
+      isassociatedwith:
+        - 88bebc8d-00d7-4e4c-a97e-48aaad8d349e
+      iscontainedinside:
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+    8ba5792d-d398-4465-8931-a627eae1ae2c:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2170
+        'y': 530
+      z: 2
+      parent: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+      embeds: []
+    271ad002-39c1-4c07-9e47-bada4f000316:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2010
+        'y': 90
+      z: 1
+      embeds: []
+    53b0c7b8-475d-4f5e-9037-f3de233c3462:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2010
+        'y': 20
+      z: 1
+      embeds: []
+    e769f5c1-daa5-432d-971f-6aa460e4183a:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2010
+        'y': 150
+      z: 1
+      embeds: []
+      isassociatedwith:
+        - 37716d51-5898-47f2-83e1-d3676290d2e8
+    2279207e-f2dc-4277-b62c-85dd75bcef8c:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2010
+        'y': 210
+      z: 1
+      embeds: []
+      isassociatedwith:
+        - 37716d51-5898-47f2-83e1-d3676290d2e8
+    ee532892-a8d2-4aaa-8b8a-c06cb70b6360:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2320
+        'y': 1080
+      z: 0
+      embeds: []
+      dependson:
+        - c2dddb03-c8e1-4df4-8a78-2204a279fff6
+        - 03328479-ebd2-4f7b-bf37-1c60290803c4
+    0b06d1a6-0e47-4dc3-a0e3-c3cc8b1d466c:
+      source:
+        id: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+      target:
+        id: ee532892-a8d2-4aaa-8b8a-c06cb70b6360
+      z: 1
+    3f7811a0-e66c-4c7c-bfae-4100afd34e4a:
+      size:
+        width: 140
+        height: 140
+      position:
+        x: 2200
+        'y': 730
+      z: 2
+      parent: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+      embeds:
+        - 00e04d77-0a32-45cb-b435-651f4f046807
+      iscontainedinside:
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+        - 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+    00e04d77-0a32-45cb-b435-651f4f046807:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2240
+        'y': 780
+      z: 3
+      parent: 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+      embeds: []
+      isassociatedwith:
+        - ee532892-a8d2-4aaa-8b8a-c06cb70b6360
+      iscontainedinside:
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+        - 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+      dependson:
+        - 0b06d1a6-0e47-4dc3-a0e3-c3cc8b1d466c
+    4208ea9f-ceb5-4eab-ad48-793ff8d1d439:
+      source:
+        id: 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+      target:
+        id: c2dddb03-c8e1-4df4-8a78-2204a279fff6
+      z: 2
+    a0d1dce2-27a4-4134-87cd-38e7eeb424f0:
+      source:
+        id: 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+      target:
+        id: 03328479-ebd2-4f7b-bf37-1c60290803c4
+      z: 2
+    e45173b9-6f54-48b4-ae64-68b0877e93ef:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 2270
+        'y': 350
+      z: 2
+      parent: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+      embeds: []
+      isassociatedwith:
+        - 88bebc8d-00d7-4e4c-a97e-48aaad8d349e
+      iscontainedinside:
+        - c2dddb03-c8e1-4df4-8a78-2204a279fff6
+        - 03328479-ebd2-4f7b-bf37-1c60290803c4
+      dependson:
+        - 0b06d1a6-0e47-4dc3-a0e3-c3cc8b1d466c
+    a4352248-bd05-48a9-8486-8ecc9f819f6d:
+      source:
+        id: 37716d51-5898-47f2-83e1-d3676290d2e8
+      target:
+        id: 0b06d1a6-0e47-4dc3-a0e3-c3cc8b1d466c
+      z: 4
+    6faed366-34f5-4395-a061-986f48c270ba:
+      source:
+        id: e45173b9-6f54-48b4-ae64-68b0877e93ef
+      target:
+        id: 0b06d1a6-0e47-4dc3-a0e3-c3cc8b1d466c
+      z: 5
+Parameters:
+  pCreateBastionHost:
+    Description: Should a Bastion host be created inside the Public Subnet(s)?
+    Type: String
+    Default: true
+    AllowedValues:
+      - true
+      - false
+  pBastionInstanceType:
+    Description: WebServer EC2 instance type
+    Type: String
+    Default: t2.micro
+    AllowedValues:
+      - t1.micro
+      - t2.nano
+      - t2.micro
+      - t2.small
+      - t2.medium
+      - t2.large
+      - m1.small
+      - m1.medium
+      - m1.large
+      - m1.xlarge
+      - m2.xlarge
+      - m2.2xlarge
+      - m2.4xlarge
+      - m3.medium
+      - m3.large
+      - m3.xlarge
+      - m3.2xlarge
+      - m4.large
+      - m4.xlarge
+      - m4.2xlarge
+      - m4.4xlarge
+      - m4.10xlarge
+      - c1.medium
+      - c1.xlarge
+      - c3.large
+      - c3.xlarge
+      - c3.2xlarge
+      - c3.4xlarge
+      - c3.8xlarge
+      - c4.large
+      - c4.xlarge
+      - c4.2xlarge
+      - c4.4xlarge
+      - c4.8xlarge
+      - g2.2xlarge
+      - g2.8xlarge
+      - r3.large
+      - r3.xlarge
+      - r3.2xlarge
+      - r3.4xlarge
+      - r3.8xlarge
+      - i2.xlarge
+      - i2.2xlarge
+      - i2.4xlarge
+      - i2.8xlarge
+      - d2.xlarge
+      - d2.2xlarge
+      - d2.4xlarge
+      - d2.8xlarge
+      - hi1.4xlarge
+      - hs1.8xlarge
+      - cr1.8xlarge
+      - cc2.8xlarge
+      - cg1.4xlarge
+    ConstraintDescription: must be a valid EC2 instance type.
+  pRegionAZ1Name:
+    Description: Availability Zone 1 Name in Region
+    Type: 'AWS::EC2::AvailabilityZone::Name'
+  pRegionAZ2Name:
+    Description: Availability Zone 2 Name in Region
+    Type: 'AWS::EC2::AvailabilityZone::Name'
+  pEC2KeyPairBastion:
+    Description: The EC2 Key Pair to allow SSH access to the instances
+    Type: 'AWS::EC2::KeyPair::KeyName'
+    ConstraintDescription: must be the name of an existing EC2 KeyPair.
+  pBastionVPCName:
+    Description: Bastion VPC Name
+    Type: String
+    Default: Bastion VPC
+  pBastionCIDR:
+    Description: CIDR block for Bastion VPC
+    Type: String
+    Default: 10.10.0.0/16
+  pBastionPublicSubnetAZ1CIDR:
+    Description: CIDR block for Bastion AZ1 subnet
+    Type: String
+    Default: 10.10.8.0/21
+  pBastionPublicSubnetAZ2CIDR:
+    Description: CIDR block for Bastion AZ2 subnet
+    Type: String
+    Default: 10.10.16.0/21
+  pBastionSSHCIDR:
+    Description: The IP address range that can be used to SSH to the EC2 instances
+    Type: String
+    MinLength: '9'
+    MaxLength: '18'
+    Default: 0.0.0.0/0
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
+    ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+  pOperatorEmail:
+    Description: Email address to notify if there are any scaling operations
+    Type: String
+    AllowedPattern: >-
+      ([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)
+    ConstraintDescription: must be a valid email address.
+  pVPCTenancy:
+    Description: Instance tenancy behavior for this VPC
+    Type: String
+    Default: default
+    AllowedValues:
+      - default
+      - dedicated
+Conditions:
+  cCreateBastionHost: !Equals 
+    - true
+    - !Ref pCreateBastionHost
+Mappings:
+  Region2Examples:
+    us-east-1:
+      Examples: 'https://s3.amazonaws.com/cloudformation-examples-us-east-1'
+    us-west-2:
+      Examples: 'https://s3-us-west-2.amazonaws.com/cloudformation-examples-us-west-2'
+    us-west-1:
+      Examples: 'https://s3-us-west-1.amazonaws.com/cloudformation-examples-us-west-1'
+    eu-west-1:
+      Examples: 'https://s3-eu-west-1.amazonaws.com/cloudformation-examples-eu-west-1'
+    eu-west-2:
+      Examples: 'https://s3-eu-west-2.amazonaws.com/cloudformation-examples-eu-west-2'
+    eu-central-1:
+      Examples: >-
+        https://s3-eu-central-1.amazonaws.com/cloudformation-examples-eu-central-1
+    ap-southeast-1:
+      Examples: >-
+        https://s3-ap-southeast-1.amazonaws.com/cloudformation-examples-ap-southeast-1
+    ap-northeast-1:
+      Examples: >-
+        https://s3-ap-northeast-1.amazonaws.com/cloudformation-examples-ap-northeast-1
+    ap-northeast-2:
+      Examples: >-
+        https://s3-ap-northeast-2.amazonaws.com/cloudformation-examples-ap-northeast-2
+    ap-southeast-2:
+      Examples: >-
+        https://s3-ap-southeast-2.amazonaws.com/cloudformation-examples-ap-southeast-2
+    ap-south-1:
+      Examples: 'https://s3-ap-south-1.amazonaws.com/cloudformation-examples-ap-south-1'
+    us-east-2:
+      Examples: 'https://s3-us-east-2.amazonaws.com/cloudformation-examples-us-east-2'
+    ca-central-1:
+      Examples: >-
+        https://s3-ca-central-1.amazonaws.com/cloudformation-examples-ca-central-1
+    sa-east-1:
+      Examples: 'https://s3-sa-east-1.amazonaws.com/cloudformation-examples-sa-east-1'
+    cn-north-1:
+      Examples: >-
+        https://s3.cn-north-1.amazonaws.com.cn/cloudformation-examples-cn-north-1
+  AWSInstanceType2Arch:
+    t1.micro:
+      Arch: PV64
+    t2.nano:
+      Arch: HVM64
+    t2.micro:
+      Arch: HVM64
+    t2.small:
+      Arch: HVM64
+    t2.medium:
+      Arch: HVM64
+    t2.large:
+      Arch: HVM64
+    m1.small:
+      Arch: PV64
+    m1.medium:
+      Arch: PV64
+    m1.large:
+      Arch: PV64
+    m1.xlarge:
+      Arch: PV64
+    m2.xlarge:
+      Arch: PV64
+    m2.2xlarge:
+      Arch: PV64
+    m2.4xlarge:
+      Arch: PV64
+    m3.medium:
+      Arch: HVM64
+    m3.large:
+      Arch: HVM64
+    m3.xlarge:
+      Arch: HVM64
+    m3.2xlarge:
+      Arch: HVM64
+    m4.large:
+      Arch: HVM64
+    m4.xlarge:
+      Arch: HVM64
+    m4.2xlarge:
+      Arch: HVM64
+    m4.4xlarge:
+      Arch: HVM64
+    m4.10xlarge:
+      Arch: HVM64
+    c1.medium:
+      Arch: PV64
+    c1.xlarge:
+      Arch: PV64
+    c3.large:
+      Arch: HVM64
+    c3.xlarge:
+      Arch: HVM64
+    c3.2xlarge:
+      Arch: HVM64
+    c3.4xlarge:
+      Arch: HVM64
+    c3.8xlarge:
+      Arch: HVM64
+    c4.large:
+      Arch: HVM64
+    c4.xlarge:
+      Arch: HVM64
+    c4.2xlarge:
+      Arch: HVM64
+    c4.4xlarge:
+      Arch: HVM64
+    c4.8xlarge:
+      Arch: HVM64
+    g2.2xlarge:
+      Arch: HVMG2
+    g2.8xlarge:
+      Arch: HVMG2
+    r3.large:
+      Arch: HVM64
+    r3.xlarge:
+      Arch: HVM64
+    r3.2xlarge:
+      Arch: HVM64
+    r3.4xlarge:
+      Arch: HVM64
+    r3.8xlarge:
+      Arch: HVM64
+    i2.xlarge:
+      Arch: HVM64
+    i2.2xlarge:
+      Arch: HVM64
+    i2.4xlarge:
+      Arch: HVM64
+    i2.8xlarge:
+      Arch: HVM64
+    d2.xlarge:
+      Arch: HVM64
+    d2.2xlarge:
+      Arch: HVM64
+    d2.4xlarge:
+      Arch: HVM64
+    d2.8xlarge:
+      Arch: HVM64
+    hi1.4xlarge:
+      Arch: HVM64
+    hs1.8xlarge:
+      Arch: HVM64
+    cr1.8xlarge:
+      Arch: HVM64
+    cc2.8xlarge:
+      Arch: HVM64
+  AWSInstanceType2NATArch:
+    t1.micro:
+      Arch: NATPV64
+    t2.nano:
+      Arch: NATHVM64
+    t2.micro:
+      Arch: NATHVM64
+    t2.small:
+      Arch: NATHVM64
+    t2.medium:
+      Arch: NATHVM64
+    t2.large:
+      Arch: NATHVM64
+    m1.small:
+      Arch: NATPV64
+    m1.medium:
+      Arch: NATPV64
+    m1.large:
+      Arch: NATPV64
+    m1.xlarge:
+      Arch: NATPV64
+    m2.xlarge:
+      Arch: NATPV64
+    m2.2xlarge:
+      Arch: NATPV64
+    m2.4xlarge:
+      Arch: NATPV64
+    m3.medium:
+      Arch: NATHVM64
+    m3.large:
+      Arch: NATHVM64
+    m3.xlarge:
+      Arch: NATHVM64
+    m3.2xlarge:
+      Arch: NATHVM64
+    m4.large:
+      Arch: NATHVM64
+    m4.xlarge:
+      Arch: NATHVM64
+    m4.2xlarge:
+      Arch: NATHVM64
+    m4.4xlarge:
+      Arch: NATHVM64
+    m4.10xlarge:
+      Arch: NATHVM64
+    c1.medium:
+      Arch: NATPV64
+    c1.xlarge:
+      Arch: NATPV64
+    c3.large:
+      Arch: NATHVM64
+    c3.xlarge:
+      Arch: NATHVM64
+    c3.2xlarge:
+      Arch: NATHVM64
+    c3.4xlarge:
+      Arch: NATHVM64
+    c3.8xlarge:
+      Arch: NATHVM64
+    c4.large:
+      Arch: NATHVM64
+    c4.xlarge:
+      Arch: NATHVM64
+    c4.2xlarge:
+      Arch: NATHVM64
+    c4.4xlarge:
+      Arch: NATHVM64
+    c4.8xlarge:
+      Arch: NATHVM64
+    g2.2xlarge:
+      Arch: NATHVMG2
+    g2.8xlarge:
+      Arch: NATHVMG2
+    r3.large:
+      Arch: NATHVM64
+    r3.xlarge:
+      Arch: NATHVM64
+    r3.2xlarge:
+      Arch: NATHVM64
+    r3.4xlarge:
+      Arch: NATHVM64
+    r3.8xlarge:
+      Arch: NATHVM64
+    i2.xlarge:
+      Arch: NATHVM64
+    i2.2xlarge:
+      Arch: NATHVM64
+    i2.4xlarge:
+      Arch: NATHVM64
+    i2.8xlarge:
+      Arch: NATHVM64
+    d2.xlarge:
+      Arch: NATHVM64
+    d2.2xlarge:
+      Arch: NATHVM64
+    d2.4xlarge:
+      Arch: NATHVM64
+    d2.8xlarge:
+      Arch: NATHVM64
+    hi1.4xlarge:
+      Arch: NATHVM64
+    hs1.8xlarge:
+      Arch: NATHVM64
+    cr1.8xlarge:
+      Arch: NATHVM64
+    cc2.8xlarge:
+      Arch: NATHVM64
+  AWSRegionArch2AMI:
+    us-east-1:
+      PV64: ami-2a69aa47
+      HVM64: ami-6869aa05
+      HVMG2: ami-a41a3fb3
+    us-west-2:
+      PV64: ami-7f77b31f
+      HVM64: ami-7172b611
+      HVMG2: ami-caf253aa
+    us-west-1:
+      PV64: ami-a2490dc2
+      HVM64: ami-31490d51
+      HVMG2: ami-00347e60
+    eu-west-1:
+      PV64: ami-4cdd453f
+      HVM64: ami-f9dd458a
+      HVMG2: ami-e2f7bd91
+    eu-west-2:
+      PV64: NOT_SUPPORTED
+      HVM64: ami-886369ec
+      HVMG2: NOT_SUPPORTED
+    eu-central-1:
+      PV64: ami-6527cf0a
+      HVM64: ami-ea26ce85
+      HVMG2: ami-d2ff04bd
+    ap-northeast-1:
+      PV64: ami-3e42b65f
+      HVM64: ami-374db956
+      HVMG2: ami-4c78d52d
+    ap-northeast-2:
+      PV64: NOT_SUPPORTED
+      HVM64: ami-2b408b45
+      HVMG2: NOT_SUPPORTED
+    ap-southeast-1:
+      PV64: ami-df9e4cbc
+      HVM64: ami-a59b49c6
+      HVMG2: ami-f3f95990
+    ap-southeast-2:
+      PV64: ami-63351d00
+      HVM64: ami-dc361ebf
+      HVMG2: ami-3a122e59
+    ap-south-1:
+      PV64: NOT_SUPPORTED
+      HVM64: ami-ffbdd790
+      HVMG2: ami-21a7d34e
+    us-east-2:
+      PV64: NOT_SUPPORTED
+      HVM64: ami-f6035893
+      HVMG2: NOT_SUPPORTED
+    ca-central-1:
+      PV64: NOT_SUPPORTED
+      HVM64: ami-730ebd17
+      HVMG2: NOT_SUPPORTED
+    sa-east-1:
+      PV64: ami-1ad34676
+      HVM64: ami-6dd04501
+      HVMG2: NOT_SUPPORTED
+    cn-north-1:
+      PV64: ami-77559f1a
+      HVM64: ami-8e6aa0e3
+      HVMG2: NOT_SUPPORTED
+Resources:
+  rNotificationTopic:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      Subscription:
+        - Endpoint: !Ref pOperatorEmail
+          Protocol: email
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 8ba5792d-d398-4465-8931-a627eae1ae2c
+  rBastionVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: !Ref pBastionCIDR
+      InstanceTenancy: !Ref pVPCTenancy
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: !Ref pBastionVPCName
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 114cd20f-2bb8-4c69-be12-3d5267cb4b5f
+  rSubnetAZ1:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      CidrBlock: !Ref pBastionPublicSubnetAZ1CIDR
+      AvailabilityZone: !Ref pRegionAZ1Name
+      VpcId: !Ref rBastionVPC
+      Tags:
+        - Key: Name
+          Value: Bastion Public Subnet AZ1
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c2dddb03-c8e1-4df4-8a78-2204a279fff6
+  rSubnetAZ2:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      CidrBlock: !Ref pBastionPublicSubnetAZ2CIDR
+      AvailabilityZone: !Ref pRegionAZ2Name
+      VpcId: !Ref rBastionVPC
+      Tags:
+        - Key: Name
+          Value: Bastion Public Subnet AZ2
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 03328479-ebd2-4f7b-bf37-1c60290803c4
+  rBastionSG:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable SSH access from the load balancer only
+      VpcId: !Ref rBastionVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: !Ref pBastionSSHCIDR
+        - IpProtocol: icmp
+          FromPort: '-1'
+          ToPort: '-1'
+          CidrIp: !Ref pBastionSSHCIDR
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 88bebc8d-00d7-4e4c-a97e-48aaad8d349e
+  rBastionASG:
+    Type: 'AWS::AutoScaling::AutoScalingGroup'
+    Properties:
+      DesiredCapacity: 1
+      LaunchConfigurationName: !Ref rBastionASLC
+      MaxSize: 2
+      MinSize: 1
+      VPCZoneIdentifier:
+        - !Ref rSubnetAZ1
+        - !Ref rSubnetAZ2
+      Cooldown: '300'
+      Tags:
+        - Key: Name
+          Value: LinuxBastion
+          PropagateAtLaunch: 'true'
+      AvailabilityZones:
+        - !Ref pRegionAZ1Name
+        - !Ref pRegionAZ2Name
+      NotificationConfiguration:
+        TopicARN: !Ref rNotificationTopic
+        NotificationTypes:
+          - 'autoscaling:EC2_INSTANCE_LAUNCH'
+          - 'autoscaling:EC2_INSTANCE_LAUNCH_ERROR'
+          - 'autoscaling:EC2_INSTANCE_TERMINATE'
+          - 'autoscaling:EC2_INSTANCE_TERMINATE_ERROR'
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT10M
+        Count: 1
+    UpdatePolicy:
+      AutoScalingRollingUpdate:
+        MinInstancesInService: '1'
+        MaxBatchSize: '1'
+        PauseTime: PT15M
+        WaitOnResourceSignals: 'true'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 37716d51-5898-47f2-83e1-d3676290d2e8
+    DependsOn:
+      - rBastionLB
+      - rBastionIGWAttachment
+  rBastionASLC:
+    Type: 'AWS::AutoScaling::LaunchConfiguration'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 9d30e47d-29e5-46ae-87bb-5e117f3a29c5
+      Comment: Install a simple application
+      'AWS::CloudFormation::Init':
+        config:
+          packages:
+            yum:
+              httpd: []
+          files:
+            /var/www/html/index.html:
+              content: !Join 
+                - |+
+
+                - - <img src="
+                  - !FindInMap 
+                    - Region2Examples
+                    - !Ref 'AWS::Region'
+                    - Examples
+                  - /cloudformation_graphic.png" alt="AWS CloudFormation Logo"/>
+                  - >-
+                    <h1>Congratulations, you have successfully launched the AWS
+                    CloudFormation sample.</h1>
+              mode: '000644'
+              owner: root
+              group: root
+            /etc/cfn/cfn-hup.conf:
+              content: !Join 
+                - ''
+                - - |
+                    [main]
+                  - stack=
+                  - !Ref 'AWS::StackId'
+                  - |+
+
+                  - region=
+                  - !Ref 'AWS::Region'
+                  - |+
+
+              mode: '000400'
+              owner: root
+              group: root
+            /etc/cfn/hooks.d/cfn-auto-reloader.conf:
+              content: !Join 
+                - ''
+                - - |
+                    [cfn-auto-reloader-hook]
+                  - |
+                    triggers=post.update
+                  - >
+                    path=Resources.LaunchConfig.Metadata.AWS::CloudFormation::Init
+                  - 'action=/opt/aws/bin/cfn-init -v '
+                  - '         --stack '
+                  - !Ref 'AWS::StackName'
+                  - '         --resource LaunchConfig '
+                  - '         --region '
+                  - !Ref 'AWS::Region'
+                  - |+
+
+                  - |
+                    runas=root
+          services:
+            sysvinit:
+              httpd:
+                enabled: 'true'
+                ensureRunning: 'true'
+              cfn-hup:
+                enabled: 'true'
+                ensureRunning: 'true'
+                files:
+                  - /etc/cfn/cfn-hup.conf
+                  - /etc/cfn/hooks.d/cfn-auto-reloader.conf
+    Properties:
+      AssociatePublicIpAddress: 'true'
+      KeyName: !Ref pEC2KeyPairBastion
+      ImageId: !FindInMap 
+        - AWSRegionArch2AMI
+        - !Ref 'AWS::Region'
+        - !FindInMap 
+          - AWSInstanceType2Arch
+          - !Ref pBastionInstanceType
+          - Arch
+      SecurityGroups:
+        - !Ref rBastionSG
+      InstanceType: !Ref pBastionInstanceType
+      UserData: !Base64 
+        'Fn::Join':
+          - ''
+          - - |
+              #!/bin/bash -xe
+            - |
+              yum update -y aws-cfn-bootstrap
+            - '/opt/aws/bin/cfn-init -v '
+            - '         --stack '
+            - !Ref 'AWS::StackName'
+            - '         --resource rBastionASLC '
+            - '         --region '
+            - !Ref 'AWS::Region'
+            - |+
+
+            - '/opt/aws/bin/cfn-signal -e $? '
+            - '         --stack '
+            - !Ref 'AWS::StackName'
+            - '         --resource rBastionASG '
+            - '         --region '
+            - !Ref 'AWS::Region'
+            - |+
+
+  rBastionScaleUpPolicy:
+    Type: 'AWS::AutoScaling::ScalingPolicy'
+    Properties:
+      AdjustmentType: ChangeInCapacity
+      AutoScalingGroupName: !Ref rBastionASG
+      Cooldown: '60'
+      ScalingAdjustment: '1'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 2279207e-f2dc-4277-b62c-85dd75bcef8c
+  rBastionScaleDownPolicy:
+    Type: 'AWS::AutoScaling::ScalingPolicy'
+    Properties:
+      AdjustmentType: ChangeInCapacity
+      AutoScalingGroupName: !Ref rBastionASG
+      Cooldown: '60'
+      ScalingAdjustment: '-1'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e769f5c1-daa5-432d-971f-6aa460e4183a
+  rCPUAlarmHigh:
+    Type: 'AWS::CloudWatch::Alarm'
+    Properties:
+      AlarmDescription: Scale-up if CPU > 90% for 10 minutes
+      MetricName: CPUUtilization
+      Namespace: AWS/EC2
+      Statistic: Average
+      Period: '300'
+      EvaluationPeriods: '2'
+      Threshold: '90'
+      AlarmActions:
+        - !Ref rBastionScaleUpPolicy
+      Dimensions:
+        - Name: AutoScalingGroupName
+          Value: !Ref rBastionASG
+      ComparisonOperator: GreaterThanThreshold
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 53b0c7b8-475d-4f5e-9037-f3de233c3462
+  rCPUAlarmLow:
+    Type: 'AWS::CloudWatch::Alarm'
+    Properties:
+      AlarmDescription: Scale-down if CPU < 70% for 10 minutes
+      MetricName: CPUUtilization
+      Namespace: AWS/EC2
+      Statistic: Average
+      Period: '300'
+      EvaluationPeriods: '2'
+      Threshold: '70'
+      AlarmActions:
+        - !Ref rBastionScaleDownPolicy
+      Dimensions:
+        - Name: AutoScalingGroupName
+          Value: !Ref rBastionASG
+      ComparisonOperator: LessThanThreshold
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 271ad002-39c1-4c07-9e47-bada4f000316
+  rBastionIGW:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: igw-bastion
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: ee532892-a8d2-4aaa-8b8a-c06cb70b6360
+    DependsOn:
+      - rSubnetAZ1
+      - rSubnetAZ2
+  rBastionIGWAttachment:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref rBastionVPC
+      InternetGatewayId: !Ref rBastionIGW
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 0b06d1a6-0e47-4dc3-a0e3-c3cc8b1d466c
+  rBastionMainRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref rBastionVPC
+      Tags:
+        - Key: Name
+          Value: Bastion Main Route
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 3f7811a0-e66c-4c7c-bfae-4100afd34e4a
+  rBastionRoute:
+    DependsOn:
+      - rBastionIGWAttachment
+    Type: 'AWS::EC2::Route'
+    Properties:
+      RouteTableId: !Ref rBastionMainRouteTable
+      GatewayId: !Ref rBastionIGW
+      DestinationCidrBlock: 0.0.0.0/0
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 00e04d77-0a32-45cb-b435-651f4f046807
+  rRouteAssocBastionAZ1:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref rBastionMainRouteTable
+      SubnetId: !Ref rSubnetAZ1
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 4208ea9f-ceb5-4eab-ad48-793ff8d1d439
+  rRouteAssocBastionAZ2:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref rBastionMainRouteTable
+      SubnetId: !Ref rSubnetAZ2
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: a0d1dce2-27a4-4134-87cd-38e7eeb424f0
+  rBastionLB:
+    Type: 'AWS::ElasticLoadBalancing::LoadBalancer'
+    Properties:
+      LoadBalancerName: BastionLB
+      Listeners:
+        - LoadBalancerPort: '22'
+          InstancePort: '22'
+          Protocol: TCP
+      Subnets:
+        - !Ref rSubnetAZ1
+        - !Ref rSubnetAZ2
+      SecurityGroups:
+        - !Ref rBastionSG
+      CrossZone: 'true'
+      Tags:
+        - Key: Name
+          Value: Bastion LB
+      HealthCheck:
+        Target: 'TCP:22'
+        HealthyThreshold: '3'
+        UnhealthyThreshold: '5'
+        Interval: '10'
+        Timeout: '3'
+      ConnectionDrainingPolicy:
+        Enabled: 'true'
+        Timeout: '60'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e45173b9-6f54-48b4-ae64-68b0877e93ef
+    DependsOn:
+      - rBastionIGWAttachment
+Outputs:
+  URL:
+    Description: The URL of the website
+    Value: !Join 
+      - ''
+      - - 'ssh -i'
+        - !GetAtt
+          - rBastionLB
+          - DNSName
